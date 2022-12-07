@@ -6,8 +6,16 @@ Why this name? Simply because a marketplace with these vulnerabilities can be ju
 - php ver 7.4.33 or lower.
 - Preferably a linux machine. 
 
-## Rules
+## Setup
+- Create a new PostgreSQL database with a table called 'users' with the fallowing structure and values:
+
+| **username** | **passwd**         | **account_type**   |
+|:------------:|--------------------|--------------------|
+|     Admin    | af1_2@df223g-$swea | RSnakeXKPLlGdf2gYf |
+|    wiener    |        peter       |  dqwe13fdsfq2gys38 |
+
 - Clone the repository.
+- Open the login.php file and set the databse credentials in the pg_connect method.
 - In the root folder open a new terminal.
 - Start a php server typing ***php -S IP:PORT***.
 
