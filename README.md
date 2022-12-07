@@ -20,6 +20,8 @@ Why this name? Simply because a marketplace with these vulnerabilities can be ju
 - Start a php server typing ***php -S IP:PORT***.
 
 ## Note
+First of all, don't use the original credentials that you see during the databese setup to login as Admin 😉. You have to by pass it!
+
 At this moment the challange is not hosted, so you have to host by yourself in localhost and find the way to intercept the localhost requests with your proxy tool (Burp, Zap, etc.).
 
 Morever, it is better to host the challange in a linux machine to avoid problems with all the tools that you need.
