@@ -78,16 +78,14 @@
 </body>
 
 </html>
+
 <?php
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
 
-#remove special characters
-$blacklist = array(" ", "&", "|", "@", "%", "^", "~", "<", ">", ",", "\\", "\"", "=");
-$user_agent = str_replace($blacklist, "", $user_agent);
-$blacklist = array(
-  "nc", "ncat", "netcat", "ls", "cat", "less",
-  "tail", "more", "whoami", "pwd", "curl", "busybox", "echo"
-);
+#filtering user agent
+$blacklist = array( "tail", "nc", "pwd", "less", "ncat", "ls", "netcat", "cat", "curl", "whoami", "echo", "~", "+",
+ " ", ",", ";", "&", "|", "'", "%", "@", "<", ">", "\\", "^", "\"",
+"=");
 $user_agent = str_replace($blacklist, "", $user_agent);
 
 shell_exec("echo \"" . $user_agent . "\" >> logUserAgent");
